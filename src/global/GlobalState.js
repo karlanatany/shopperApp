@@ -31,20 +31,21 @@ export const GlobalState = (props) => {
 
   const addToCart = (product) => {
     const newProductsCart = [...productsCart]
+    const alertMsg = `${product.name} adicionado ao carrinho!`
 
     const productIndex = newProductsCart.findIndex((productItem) => product.id === productItem.id)
-    if (productIndex === -1) {
-      newProductsCart.push({ id: product.id, qty: 1, name: product.name, price: product.price })
+    
+    if (product.qty_stock <= 0){
+      alert('produto indisponvel.')
+    }else if (productIndex === -1) {
+      newProductsCart.push({ id: product.id, qty: 1, name: product.name, price: product.price, qty_stock: product.qty_stock })
+      alert(alertMsg)
     } else {
       newProductsCart[productIndex].qty += 1
+      alert(alertMsg)
     }
-    // if ( newProductsCart[productIndex].qty_stock <= 0){
-    //   alert('Poduto indisponível.')
-    // }
-    alert( `${product.name} adicionado ao carrinho`)
     setProductsCart(newProductsCart)
     updateStock(product, 'add')
-
   };
 
   const removeFromCart = (product) => {
