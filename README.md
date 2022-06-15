@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+## Aplicação desenvolvida para avaliação técnica para vaga frontend na Shopper.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Features:**
 
-## Available Scripts
+ - Cadastro de pedidos com nome de usuário, data de retirada e lista de compras;
+- Adição e/ou remoção de produtos do carrinho;
+- Atualização do valor total do carrinho de acordo com as ações;
+- Persistência dos dados no banco de dados sql;
+- Atualização do estoque;
 
-In the project directory, you can run:
+**Tecnologias:**
 
-### `npm start`
+- sql
+- node.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Pré-requisitos:**
+Ter instalado na máquina o mysql, node.js e git.
+ 
+**Rodando o backend:**
+Clone o repositório, disponibilizado exclusivamente para construção deste projeto Front-End:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    $ git clone https://github.com/karlanatany/shopperApp.git
 
-### `npm test`
+Acesse a pasta do projeto no terminal/cmd:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    $ cd shopperApp
+    $ cd backend
 
-### `npm run build`
+Acesse o projeto via VSCode:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+$ code .
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Instale as dependências:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    $ npm install
 
-### `npm run eject`
+Crie as tabelas:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    $ npm run migrations
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Execute o script start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    $ npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+O servidor iniciará na porta: 3030.
 
-## Learn More
+**Rodando o frontend:**
+Acesse a pasta do projeto no terminal/cmd:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    $ cd shopperApp
+    $ cd backend
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Acesse o projeto via VSCode:
 
-### Code Splitting
+    $ code .
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Instale as dependências:
 
-### Analyzing the Bundle Size
+    $ npm install
+Starte o projeto:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    $ npm start
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
